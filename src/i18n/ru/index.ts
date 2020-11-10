@@ -123,7 +123,7 @@ export default {
         notActive: {
           tooltip: 'Эмодзи'
         }
-      },
+      }
     },
     Image: {
       buttons: {

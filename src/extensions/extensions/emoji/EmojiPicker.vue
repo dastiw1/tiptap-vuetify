@@ -23,7 +23,7 @@ import { VMenu, VCard } from 'vuetify/lib'
 import { Component, Prop } from 'vue-property-decorator'
 import I18nMixin from '~/mixins/I18nMixin'
 export const PROPS = {
-  CONTEXT: 'context' as const, 
+  CONTEXT: 'context' as const,
   EDITOR: 'editor' as const
 }
 Vue.use(VEmojiPicker)
@@ -59,18 +59,18 @@ export default class EmojiPicker extends mixins(I18nMixin) {
     required: true
   })
   readonly [PROPS.EDITOR]: any
- 
+
   data () {
     return {
       value: true
     }
   }
- get activator() {
-   const el = document.querySelector('.tiptap-vuetify-editor__toolbar .mdi-emoticon-outline');
-   
-   return el?.closest('.tiptap-vuetify-editor__action-render-btn')
- }
- 
+  get activator () {
+    const el = document.querySelector('.tiptap-vuetify-editor__toolbar .mdi-emoticon-outline')
+
+    return el?.closest('.tiptap-vuetify-editor__action-render-btn')
+  }
+
   selectEmoji (emoji) {
     this.editor.focus()
 
@@ -83,7 +83,6 @@ export default class EmojiPicker extends mixins(I18nMixin) {
   }
 }
 </script>
-
 
 <style lang="stylus">
   .tiptap-vuetify-editor

@@ -3,17 +3,16 @@ import AbstractExtension from '~/extensions/AbstractExtension'
 import ExtensionActionInterface from '~/extensions/actions/ExtensionActionInterface'
 import { VuetifyIconsGroups } from '~/configs/theme'
 import ExtensionActionRenderBtn from '~/extensions/actions/renders/btn/ExtensionActionRenderBtn.ts'
-import EmojiPicker from '~/extensions/extensions/emoji/EmojiPicker.vue';
-import Vue from 'vue';
-import I18nText from '~/i18n/I18nText';
+import EmojiPicker from '~/extensions/extensions/emoji/EmojiPicker.vue'
+import Vue from 'vue'
+import I18nText from '~/i18n/I18nText'
 
 // A class must inherit from an abstract class
 export default class Emoji extends AbstractExtension {
-  public picker : EmojiPicker;
+  public picker: EmojiPicker;
 
   // Actions list
   get availableActions (): ExtensionActionInterface[] {
-
     // For example, you can make this extension add a several buttons (array items)
     return [
       {
@@ -31,24 +30,24 @@ export default class Emoji extends AbstractExtension {
           },
           // Button's click handler
           onClick: ({ editor, context }) => {
-            const EmojiPickerComponent = Vue.extend(EmojiPicker);
+            const EmojiPickerComponent = Vue.extend(EmojiPicker)
 
             const instance = new EmojiPickerComponent({
               vuetify: Vue.prototype.tiptapVuetifyPlugin.vuetify,
               propsData: {
                 context,
-                editor,
-              },
-            });
+                editor
+              }
+            })
 
-            instance.$mount();
-            document.querySelector('body')!.appendChild(instance.$el);
-            context.picker = instance;
+            instance.$mount()
+            document.querySelector('body')!.appendChild(instance.$el)
+            context.picker = instance
           },
           // Is the button active? This affects the style of the button.
           isActive: () => {
             // @ts-ignore
-            return this.picker?.value || false;
+            return this.picker?.value || false
           }
         })
       }
@@ -56,7 +55,7 @@ export default class Emoji extends AbstractExtension {
   }
 
   // Editor initialization hook, here you can access the Editor
-  onEditorInit (editor) {
-  
+  onEditorInit () {
+
   }
 }

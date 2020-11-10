@@ -143,7 +143,7 @@ export default {
         notActive: {
           tooltip: 'Emoji'
         }
-      },
+      }
     },
     TodoList: {
       buttons: {
