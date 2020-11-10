@@ -135,6 +135,16 @@ export default {
         }
       }
     },
+    Emoji: {
+      buttons: {
+        isActive: {
+          tooltip: 'Emoji'
+        },
+        notActive: {
+          tooltip: 'Emoji'
+        }
+      },
+    },
     TodoList: {
       buttons: {
         todoList: {

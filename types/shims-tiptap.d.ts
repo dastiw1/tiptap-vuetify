@@ -43,4 +43,5 @@ declare module 'tiptap' {
   //   HorizontalRule,
   //   History,
   //   Link
+  //   Emoji
 }

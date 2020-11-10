@@ -84,10 +84,10 @@ export default {
     const {
       Heading, Bold, Italic, Strike, Underline, Code, CodeBlock, Paragraph, BulletList, OrderedList, ListItem,
       Link, Blockquote, HardBreak, HorizontalRule, History, Image, TodoList, TodoItem, Table, TableCell, TableHeader,
-      TableRow
+      TableRow, Emoji
     } = await MAIN_MODULE
-
     this.extensions = [
+      Emoji,
       MyCustomExtension,
       [Table, {
         options: {
@@ -115,6 +115,7 @@ export default {
       ListItem, // если нужно использовать список (BulletList, OrderedList)
       BulletList,
       OrderedList,
+    
       [Image, {
         options: {
           imageSources: [{ component: FileSelector, name: 'File Selector' }]
@@ -140,6 +141,9 @@ export default {
         renderIn: 'bubbleMenu'
       }]
     ]
+  },
+  mounted() {
+    
   },
   methods: {
     onkeydown (event) {

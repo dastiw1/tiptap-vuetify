@@ -115,6 +115,16 @@ export default {
         }
       }
     },
+    Emoji: {
+      buttons: {
+        isActive: {
+          tooltip: 'Эмодзи'
+        },
+        notActive: {
+          tooltip: 'Эмодзи'
+        }
+      },
+    },
     Image: {
       buttons: {
         tooltip: 'Картинка'

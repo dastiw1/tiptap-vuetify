@@ -14,6 +14,7 @@
 // import HorizontalRule from '~/nativeExtensions/HorizontalRule'
 // import History from '~/nativeExtensions/History'
 // import Link from '~/nativeExtensions/Link'
+// import Emoji from '~/extensions/Emoji'
 //
 // // TODO Open/Closed from SOLID (dynamic import)
 // export {
@@ -33,6 +34,7 @@
 //   HorizontalRule,
 //   History,
 //   Link
+//   Emoji
 // }
 
 export { default as Heading } from '~/extensions/nativeExtensions/Heading'
@@ -58,3 +60,4 @@ export { default as Table } from '~/extensions/nativeExtensions/table/Table'
 export { default as TableCell } from '~/extensions/nativeExtensions/table/TableCell'
 export { default as TableHeader } from '~/extensions/nativeExtensions/table/TableHeader'
 export { default as TableRow } from '~/extensions/nativeExtensions/table/TableRow'
+export { default as Emoji } from '~/extensions/extensions/emoji/Emoji'
