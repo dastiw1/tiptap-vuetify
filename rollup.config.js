@@ -79,7 +79,8 @@ async function getConfig ({
         // Походу так и есть: https://github.com/scrumpy/tiptap/blob/master/build/packages/config.js#L44
         'tiptap-extensions': 'tiptap', // TODO tiptapExtensions
         vuetify: 'Vuetify',
-        'vuetify/lib': 'Vuetify'
+        'vuetify/lib': 'Vuetify',
+        'v-emoji-picker/lib': 'VEmojiPicker'
       }
     },
     // TODO можно Object.keys(globals)
@@ -90,7 +91,8 @@ async function getConfig ({
       'tiptap',
       'tiptap-extensions',
       'vuetify',
-      'vuetify/lib'
+      'vuetify/lib',
+      'v-emoji-picker'
     ],
     plugins: [
       replace({
